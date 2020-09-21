@@ -1,0 +1,116 @@
+:root {
+  --page-1color: #740001;
+  --page-2color: #ae0001;
+  --page-3color: #eeba30;
+  --page-4color: #740001;
+  --page-5color: #2a623d;
+  --page-6color: #5d5d5d;
+  --page-7color: #000;
+  --animate-speed: 1s;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* no scroll bar */
+}
+
+.page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0 4rem;
+}
+
+.page h1 {
+  font-size: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #f4f4f4;
+  color: #333;
+  text-decoration: none;
+  border: none;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  transition: all .3s ease-in;
+}
+
+.btn-dark,
+.btn:hover {
+  color: #fff;
+  background: #333;
+}
+
+.btn-dark:hover {
+  background: #f4f4f4;
+  color: #333;
+}
+
+.page img {
+  max-width: 70%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Page colors */
+#stone {
+  background: var(--page-1color);  
+}
+
+#chamber {
+  background: var(--page-2color);  
+}
+
+#prison {
+  background: var(--page-3color);  
+}
+
+#goblet {
+  background: var(--page-4color);  
+}
+
+#order {
+  background: var(--page-5color);  
+}
+
+#prince {
+  background: var(--page-6color);  
+}
+
+#hallows {
+  background: var(--page-7color);  
+}
+
+/* Page Animation */
+#stone h1 {
+  transform: translateY(-1200px);
+  animation: heading var(--animate-speed) forwards ease-in;
+}
+
+#stone img {
+  transform: translateX(-3000px);
+  animation: image var(--animate-speed) forwards ease-in-out 1s; 
+}
+
+/* Keyftames */
+@keyframes heading {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes image {
+  to {
+    transform: translateX(0);
+  }
+}
